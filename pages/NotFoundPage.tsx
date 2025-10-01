@@ -14,9 +14,9 @@ const NotFoundPage: React.FC = () => {
           Sorry, we couldn’t find the page you’re looking for.
         </p>
         <div className="mt-10">
-          <Button asChild>
+          <PatchedButton asChild>
             <Link to="/">Go back home</Link>
-          </Button>
+          </PatchedButton>
         </div>
       </div>
     </PageWrapper>
@@ -43,7 +43,6 @@ const PatchedButton = React.forwardRef<HTMLButtonElement, React.ComponentProps<t
 );
 PatchedButton.displayName = 'PatchedButton';
 
-// Re-export PatchedButton to be used in NotFoundPage
-(Button as any) = PatchedButton;
+
 
 export default NotFoundPage;
