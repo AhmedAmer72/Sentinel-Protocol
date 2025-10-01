@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sentinel Protocol | Autonomous Liquidation Engine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --bg-hsl: 240 6% 8%;
+        --fg-hsl: 0 0% 98%;
+        --muted-hsl: 240 4% 18%;
+        --accent-hsl: 222 90% 60%;
+        --card-hsl: 240 4% 12%;
+        --border-hsl: 240 4% 20%;
+
+        --font-sans: 'Inter', sans-serif;
+        --font-mono: 'Geist Mono', monospace;
+      }
+      [data-theme="light"] {
+        --bg-hsl: 0 0% 100%;
+        --fg-hsl: 240 10% 4%;
+        --muted-hsl: 240 6% 94%;
+        --accent-hsl: 222 90% 50%;
+        --card-hsl: 0 0% 100%;
+        --border-hsl: 240 6% 90%;
+      }
+      body {
+        background-color: hsl(var(--bg-hsl));
+        color: hsl(var(--fg-hsl));
+        font-family: var(--font-sans);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      .grainy::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noise)"/></svg>');
+        opacity: 0.025;
+        pointer-events: none;
+        z-index: -1;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "tailwind-merge": "https://aistudiocdn.com/tailwind-merge@^3.3.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.22",
+    "recharts": "https://aistudiocdn.com/recharts@^3.2.1",
+    "clsx": "https://aistudiocdn.com/clsx@^2.1.1",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.3"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="overflow-x-hidden">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

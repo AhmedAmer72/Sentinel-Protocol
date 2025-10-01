@@ -1,0 +1,5 @@
+
+{
+  "name": "Sentinel Protocol",
+  "description": "An autonomous, on-chain liquidation engine powered by Massa’s Autonomous Smart Contracts. This application provides a user interface to interact with the Sentinel Protocol for lending, borrowing, and monitoring positions."
+}
